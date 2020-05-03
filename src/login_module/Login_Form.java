@@ -5,7 +5,9 @@
  */
 package login_module;
 
+import Client.Client;
 import java.awt.Color;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +25,7 @@ import javax.swing.JOptionPane;
 public class Login_Form extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login_Form
+    * Creates new form Login_Form
      */
     public Login_Form() {
         initComponents();
@@ -430,12 +432,7 @@ public class Login_Form extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                // show a new form
-                Chat_Form cf = new Chat_Form();
-                cf.setVisible(true);
-                cf.pack();
-                cf.setLocationRelativeTo(null);
-                // close the current form(login_form)
+                Client client = new Client(username);
                 this.dispose();
             }else{
                 // error message
@@ -443,6 +440,8 @@ public class Login_Form extends javax.swing.JFrame {
             }
             
         } catch (SQLException ex) {
+            Logger.getLogger(Login_Form.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(Login_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
         
@@ -462,7 +461,6 @@ public class Login_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel_Create_AccountMouseExited
 
     private void jLabel_Create_AccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Create_AccountMouseClicked
-
         Register_Form rf = new Register_Form();
         rf.setVisible(true);
         rf.pack();

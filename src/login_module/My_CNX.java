@@ -1,6 +1,7 @@
 package login_module;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -11,19 +12,19 @@ import java.util.logging.Logger;
  * @author Arkadiusz Dawid
  */
 public class My_CNX {
-    
-    private static String servername = "localhost";
-    private static String username = "root";
-    private static String dbname = "users_db";
-    private static Integer portnumber = 3306;
-    private static String password = "";
+
+    private static final String servername = "localhost";
+    private static final String username = "root";
+    private static final String dbname = "users_db";
+    private static final Integer portnumber = 3306;
+    private static final String password = "";
     
     public static Connection getConnection()
     {
         Connection cnx = null;
         
         MysqlDataSource datasource = new MysqlDataSource();
-        
+
         datasource.setServerName(servername);
         datasource.setUser(username);
         datasource.setPassword(password);

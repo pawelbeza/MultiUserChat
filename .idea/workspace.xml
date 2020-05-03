@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/META-INF/MultiUserChat.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/images/lock-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/images/user-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiUserChat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MultiUserChat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_module/Chat_Form.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Chat_Form.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_module/Chat_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Chat_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_module/Login_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Login_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_module/My_CNX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/My_CNX.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1b0D8XFIIxTajqu4vecvNVR9oLH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="247" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="430" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/login_module" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Chat_Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="login_module.Chat_Form" />
+      <module name="MultiUserChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="login_module.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login_Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="login_module.Login_Form" />
+      <module name="MultiUserChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="login_module.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="MultiUserChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Login_Form" />
+        <item itemvalue="Application.Chat_Form" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="" />
+      <created>1587759958586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587759958586</updated>
+      <workItem from="1587759961295" duration="678000" />
+      <workItem from="1587760654589" duration="2761000" />
+      <workItem from="1587813126266" duration="1040000" />
+      <workItem from="1587818745848" duration="4086000" />
+      <workItem from="1587826337305" duration="6218000" />
+      <workItem from="1587904183565" duration="6573000" />
+      <workItem from="1587914364289" duration="3814000" />
+      <workItem from="1587918211196" duration="1741000" />
+      <workItem from="1588435459952" duration="74000" />
+      <workItem from="1588511305400" duration="385000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2909" y="410" width="562" height="711" key="#HTTP_Proxy" timestamp="1587761733852">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2909" y="410" width="562" height="711" key="#HTTP_Proxy/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587761733852" />
+    <state x="2936" y="367" width="518" height="740" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog_Form" timestamp="1587919479862">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2936" y="367" width="518" height="740" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog_Form/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919479862" />
+    <state x="2961" y="371" width="468" height="731" key="#com.intellij.ide.util.MemberChooser" timestamp="1587917128557">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2961" y="371" width="468" height="731" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587917128557" />
+    <state x="2493" y="268" width="1394" height="945" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587918832471">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2493" y="268" width="1394" height="945" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587918832471" />
+    <state x="2928" y="415" width="940" height="658" key="FileChooserDialogImpl" timestamp="1588511313643">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2928" y="415" width="940" height="658" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1588511313643" />
+    <state width="2498" height="392" key="GridCell.Tab.0.bottom" timestamp="1587919971721">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2498" height="392" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919971721" />
+    <state width="1858" height="128" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
+    <state width="2498" height="392" key="GridCell.Tab.0.center" timestamp="1587919971721">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2498" height="392" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919971721" />
+    <state width="1858" height="128" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
+    <state width="2498" height="392" key="GridCell.Tab.0.left" timestamp="1587919971721">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2498" height="392" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919971721" />
+    <state width="1858" height="128" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
+    <state width="2498" height="392" key="GridCell.Tab.0.right" timestamp="1587919971721">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2498" height="392" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919971721" />
+    <state width="1858" height="128" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
+    <state x="2402" y="384" width="1280" height="1056" key="SettingsEditor" timestamp="1587761997081">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2402" y="384" width="1280" height="1056" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587761997081" />
+    <state x="3013" y="519" width="373" height="435" key="UIDesigner.ListEditorDialog" timestamp="1587911067333">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3013" y="519" width="373" height="435" key="UIDesigner.ListEditorDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587911067333" />
+    <state x="2020" y="127" width="2360" height="1213" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587912622218">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2020" y="127" width="2360" height="1213" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587912622218" />
+    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1587760908535">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587760908535" />
+    <state x="2840" y="587" width="709" height="300" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1587919396409">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2840" y="587" width="709" height="300" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919396409" />
+  </component>
+</project>
