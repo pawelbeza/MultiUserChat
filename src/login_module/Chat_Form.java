@@ -21,8 +21,10 @@ public class Chat_Form extends javax.swing.JFrame {
     private final Client client;
     /**
      * Creates new form Chat_Form
+     * @param client klient
+     * @param username nazwa użytkownika
      */
-    public Chat_Form(Client client,String username) {
+    public Chat_Form(Client client, String username) {
         initComponents();
         
         this.client = client;

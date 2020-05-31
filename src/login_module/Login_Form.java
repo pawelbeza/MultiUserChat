@@ -76,9 +76,11 @@ public class Login_Form extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel_login.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-icon.png"))); // NOI18N
         jLabel_login.setOpaque(true);
 
         jLabel_password.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_password.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock-icon.png"))); // NOI18N
         jLabel_password.setOpaque(true);
 
         jTextField_Username.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
@@ -167,7 +169,7 @@ public class Login_Form extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField_Username, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(jTextField_Username)
                     .addComponent(jLabel_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -194,11 +196,11 @@ public class Login_Form extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_minimizeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel_minimizeMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_minimizeMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel_minimizeMouseEntered(evt);
             }
         });
 
@@ -211,11 +213,11 @@ public class Login_Form extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_closeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel_closeMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_closeMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel_closeMouseEntered(evt);
             }
         });
 

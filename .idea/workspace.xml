@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/META-INF/MultiUserChat.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/images/lock-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/MultiUserChat/images/user-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MultiUserChat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MultiUserChat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/Chat_Form.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Chat_Form.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/Chat_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Chat_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/Login_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Login_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/My_CNX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/My_CNX.java" afterDir="false" />
-    </list>
+    <list default="true" id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +116,7 @@
       <workItem from="1587918211196" duration="1741000" />
       <workItem from="1588435459952" duration="74000" />
       <workItem from="1588511305400" duration="385000" />
+      <workItem from="1588931467838" duration="29000" />
     </task>
     <servers />
   </component>
@@ -204,5 +184,9 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2840" y="587" width="709" height="300" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587919396409" />
+    <state x="2268" y="215" width="1854" height="1043" key="new project wizard" timestamp="1588931495629">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2268" y="215" width="1854" height="1043" key="new project wizard/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1588931495629" />
   </component>
 </project>
