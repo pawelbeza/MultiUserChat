@@ -8,7 +8,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * <h1>My_CNX</h1>
+ * Odpowiada za połączenie z bazą danych
  * @author Arkadiusz Dawid
  */
 public class My_CNX {
