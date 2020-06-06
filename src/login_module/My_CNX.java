@@ -1,6 +1,6 @@
 package login_module;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class My_CNX {
 
     private static final String servername = "localhost";
-    private static final String username = "root";
+    private static final String username = "pawel";
     private static final String dbname = "users_db";
     private static final Integer portnumber = 3306;
     private static final String password = "";

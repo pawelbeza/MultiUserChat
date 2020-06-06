@@ -1,0 +1,134 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, comp jPanel1:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp jPanel1:::p::p, space :0:8:x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"undecorated": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp jPanel2:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp jPanel2:::::x, space :::p}}"
+			} ) {
+				name: "jPanel1"
+				"background": new java.awt.Color( 153, 153, 255, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp jPanel3::l:::x, seq t {space ::184:x, comp jPanel_title:::p::p, space :p:67:p, comp jLabel_minimize:::p:30:p, space :::p, comp jLabel_close:::p:30:p, space :p:15:p}}"
+					"$verticalGroup": "par l {seq t {space :::x, par l {seq t {par b {comp jLabel_minimize::b:p::p, comp jLabel_close::b:p::p}, space :p:71:p}, seq t {comp jPanel_title:::p::p, space u:::p}}, comp jPanel3:::p::p}}"
+				} ) {
+					name: "jPanel2"
+					"background": new java.awt.Color( 204, 204, 255, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp jLabel5::l:p::p, comp jLabel1::t:p::p, comp jLabel2::t:p::p, comp jLabel4::t:p::p}, space :::p, par t:::p {comp jTextField_Username::l:::x, comp jTextField_Nickname::l:::x, comp jPasswordField_1::::356:x, comp jPasswordField_2:::::x}, space :0:0:x}, seq t {space :::p, comp jLabel_login::::617:x, space :::p}, seq l {space :p:211:p, comp jButton_Register:::p:218:p, space ::200:x}}"
+						"$verticalGroup": "par l {seq t {space :p:27:p, par b {comp jLabel1::b:p::p, comp jTextField_Nickname::b:p::p}, space s:::p, par b {comp jLabel2::b:p::p, comp jTextField_Username::b:p::p}, space s:::p, par b {comp jLabel4::b:p::p, comp jPasswordField_1::b:p::p}, space s:::p, par b {comp jLabel5::b:p::p, comp jPasswordField_2::b:p::p}, space :p:32:p, comp jButton_Register:::p:48:p, space u:::p, comp jLabel_login:::p::p, space :::x}}"
+					} ) {
+						name: "jPanel3"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jButton_Register"
+							"background": new java.awt.Color( 61, 61, 255, 255 )
+							"font": new java.awt.Font( "Verdana", 0, 24 )
+							"foreground": new java.awt.Color( 255, 255, 255, 255 )
+							"text": "REGISTER"
+							"cursor": &Cursor0 new java.awt.Cursor( 12 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jButton_RegisterMouseEntered", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "jButton_RegisterMouseExited", true ) )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton_RegisterActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel1"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							"text": "nickname:"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jTextField_Nickname"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "jTextField_Username"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel2"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							"text": "username:"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel4"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							"text": "password:"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel5"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							"text": "confirm password:"
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "jPasswordField_1"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jPasswordField_1ActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "jPasswordField_2"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jPasswordField_2ActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel_login"
+							"font": new java.awt.Font( "Tahoma", 0, 14 )
+							"foreground": new java.awt.Color( 0, 153, 204, 255 )
+							"horizontalAlignment": 0
+							"text": ">> Click here to login if you already have an account <<"
+							"cursor": #Cursor0
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jLabel_loginMouseClicked", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jLabel_loginMouseEntered", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "jLabel_loginMouseExited", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel_minimize"
+						"font": new java.awt.Font( "Verdana", 1, 24 )
+						"horizontalAlignment": 0
+						"text": " - "
+						"alignmentY": 0.0f
+						"cursor": #Cursor0
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jLabel_minimizeMouseClicked", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jLabel_minimizeMouseEntered", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "jLabel_minimizeMouseExited", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel_close"
+						"font": new java.awt.Font( "Verdana", 1, 24 )
+						"horizontalAlignment": 0
+						"text": "x"
+						"alignmentY": 0.0f
+						"cursor": #Cursor0
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jLabel_closeMouseClicked", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jLabel_closeMouseEntered", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "jLabel_closeMouseExited", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {comp jLabel3::l::297:x}"
+						"$verticalGroup": "par l {comp jLabel3::t::74:x}"
+					} ) {
+						name: "jPanel_title"
+						"background": new java.awt.Color( 153, 153, 255, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "jLabel3"
+							"font": new java.awt.Font( "Verdana", 0, 36 )
+							"horizontalAlignment": 0
+							"text": "R E G I S T E R"
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 655, 510 )
+			"location": new java.awt.Point( 10, 0 )
+		} )
+	}
+}

@@ -1,0 +1,152 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp jPanel1::l:::x}"
+			"$verticalGroup": "par l {seq l {comp jPanel1:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "formWindowClosing", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp jPanel2:::::x}"
+				"$verticalGroup": "par l {comp jPanel2:::p::p}"
+			} ) {
+				name: "jPanel1"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp jLabel1::t:::x, seq {space :::p, par l {comp jPanel3:::::x, comp jPanel6::t:::x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp jLabel1:::p:55:p, space :::p, comp jPanel6:::p::p, space u:::p, comp jPanel3:::p::p, space :::x}}"
+				} ) {
+					name: "jPanel2"
+					"background": new java.awt.Color( 153, 153, 255, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel1"
+						"font": new java.awt.Font( "Tahoma", 0, 36 )
+						"horizontalAlignment": 0
+						"text": "C H A T"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {space :::p, par t {comp jPanel7:::::x, comp jPanel4::l:::x, comp jPanel9::l:::x}, space u:::p, par l:::p {comp jPanel5:::::x, comp jPanel8:::::x, comp jButton1:::::x}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, par l {comp jPanel5:::p::p, comp jPanel4:::p::p}, space :::p, par l:::p {comp jPanel7:::::x, comp jPanel8:::::x}, space :p:19:p, par l:::p {comp jButton1:::::x, comp jPanel9:::::x}, space :::x}}"
+					} ) {
+						name: "jPanel3"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, comp yourConvLabel::::451:x, space :::p}}"
+							"$verticalGroup": "par l {comp yourConvLabel::l::51:x}"
+						} ) {
+							name: "jPanel4"
+							"background": new java.awt.Color( 245, 245, 255, 255 )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "yourConvLabel"
+								"font": new java.awt.Font( "Tahoma", 0, 18 )
+								"horizontalAlignment": 0
+								"text": "Your conversation"
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {space :::p, comp onlineUsersText::::247:x, space :::p}}"
+							"$verticalGroup": "par l {comp onlineUsersText::l::51:x}"
+						} ) {
+							name: "jPanel5"
+							"background": new java.awt.Color( 245, 245, 255, 255 )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "onlineUsersText"
+								"font": new java.awt.Font( "Tahoma", 0, 18 )
+								"horizontalAlignment": 0
+								"text": "Online users"
+								"autoscrolls": true
+								"cursor": new java.awt.Cursor( 0 )
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {space :::p, comp jScrollPane2:::::x, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp jScrollPane2:::::x, space :::p}}"
+						} ) {
+							name: "jPanel7"
+							"background": new java.awt.Color( 255, 255, 255, 255 )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "jScrollPane2"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "conversationBox"
+									"editable": false
+									"columns": 20
+									"rows": 5
+									"wrapStyleWord": true
+								} )
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, comp jScrollPane1:::::x, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp jScrollPane1::::346:x, space :::p}}"
+						} ) {
+							name: "jPanel8"
+							"background": new java.awt.Color( 255, 255, 255, 255 )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "jScrollPane1"
+								add( new FormComponent( "javax.swing.JList" ) {
+									name: "onlineUsersList"
+									"font": new java.awt.Font( "Tahoma", 0, 14 )
+									"model": new javax.swing.DefaultListModel {
+										addElement( "Item 1" )
+										addElement( "Item 2" )
+										addElement( "Item 3" )
+										addElement( "Item 4" )
+										addElement( "Item 5" )
+									}
+									auxiliary() {
+										"JavaCodeGenerator.typeParameters": "String"
+									}
+								} )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jButton1"
+							"background": new java.awt.Color( 61, 61, 255, 255 )
+							"font": new java.awt.Font( "Verdana", 0, 24 )
+							"text": "SEND"
+							"cursor": new java.awt.Cursor( 12 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "jButton1MouseEntered", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "jButton1MouseExited", true ) )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton1ActionPerformed", true ) )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, comp messageBox:::::x, space :::p}}"
+							"$verticalGroup": "par l {seq t {space :::x, comp messageBox:::p::p, space :::p}}"
+						} ) {
+							name: "jPanel9"
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "messageBox"
+								"font": new java.awt.Font( "Tahoma", 0, 16 )
+								"foreground": new java.awt.Color( 153, 153, 153, 255 )
+								"text": "Write here"
+								addEvent( new FormEvent( "java.awt.event.FocusListener", "focusGained", "messageBoxFocusGained", true ) )
+								addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "messageBoxFocusLost", true ) )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "messageBoxActionPerformed", true ) )
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {comp nickname::l:::x}"
+						"$verticalGroup": "par l {comp nickname::l::44:x}"
+					} ) {
+						name: "jPanel6"
+						"background": new java.awt.Color( 133, 133, 255, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "nickname"
+							"font": new java.awt.Font( "Tahoma", 0, 18 )
+							"horizontalAlignment": 0
+							"text": "Your nickname:"
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 760, 665 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
