@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ServerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/ServerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/Chat_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Chat_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_module/Register_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_module/Register_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiUserChat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MultiUserChat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -39,6 +43,9 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="430" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -46,20 +53,26 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/login_module" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Server" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/login_module" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Login_Form">
     <configuration name="Chat_Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="login_module.Chat_Form" />
+      <option name="MAIN_CLASS_NAME" value="GUI_Forms.Chat_Form" />
       <module name="MultiUserChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="login_module.*" />
+          <option name="PATTERN" value="GUI_Forms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,11 +81,11 @@
       </method>
     </configuration>
     <configuration name="Login_Form" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="login_module.Login_Form" />
+      <option name="MAIN_CLASS_NAME" value="GUI_Forms.Login_Form" />
       <module name="MultiUserChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="login_module.*" />
+          <option name="PATTERN" value="GUI_Forms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,10 +106,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerController" />
+      <module name="MultiUserChat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MultiUserChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ServerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Login_Form" />
+        <item itemvalue="Application.ServerController" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.ServerTest" />
         <item itemvalue="Application.Chat_Form" />
       </list>
     </recent_temporary>
@@ -128,6 +165,7 @@
       <workItem from="1591458633977" duration="87000" />
       <workItem from="1591458736889" duration="80000" />
       <workItem from="1591460627518" duration="1795000" />
+      <workItem from="1591463169592" duration="4820000" />
     </task>
     <servers />
   </component>
@@ -139,10 +177,11 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2909" y="410" width="562" height="711" key="#HTTP_Proxy/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587761733852" />
-    <state x="2767" y="246" width="855" height="981" key="#Login_Form" timestamp="1591454751179">
+    <state x="2767" y="246" width="855" height="981" key="#Login_Form" timestamp="1591463921259">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2767" y="246" width="855" height="981" key="#Login_Form/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591454751179" />
+    <state x="2767" y="246" key="#Login_Form/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591463921259" />
     <state x="2767" y="246" width="855" height="981" key="#Server" timestamp="1591454740083">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -155,6 +194,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2961" y="371" width="468" height="731" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587917128557" />
+    <state x="2863" y="460" width="655" height="559" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1591473088710">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2863" y="460" width="655" height="559" key="#com.intellij.ide.util.PackageChooserDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591473088710" />
     <state x="2493" y="268" width="1394" height="945" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587918832471">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -164,29 +207,29 @@
     </state>
     <state x="2928" y="415" key="FileChooserDialogImpl/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591454402148" />
     <state x="2928" y="415" width="940" height="658" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1588511313643" />
-    <state width="2498" height="392" key="GridCell.Tab.0.bottom" timestamp="1591463153951">
+    <state width="2498" height="236" key="GridCell.Tab.0.bottom" timestamp="1591476137471">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="392" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591463153951" />
+    <state width="2498" height="236" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591476137471" />
     <state width="1858" height="128" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
-    <state width="2498" height="392" key="GridCell.Tab.0.center" timestamp="1591463153951">
+    <state width="2498" height="236" key="GridCell.Tab.0.center" timestamp="1591476137471">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.center/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="392" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591463153951" />
+    <state width="2498" height="236" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591476137471" />
     <state width="1858" height="128" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
-    <state width="2498" height="392" key="GridCell.Tab.0.left" timestamp="1591463153951">
+    <state width="2498" height="236" key="GridCell.Tab.0.left" timestamp="1591476137471">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.left/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="392" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591463153951" />
+    <state width="2498" height="236" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591476137471" />
     <state width="1858" height="128" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
-    <state width="2498" height="392" key="GridCell.Tab.0.right" timestamp="1591463153951">
+    <state width="2498" height="236" key="GridCell.Tab.0.right" timestamp="1591476137471">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.right/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="392" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591463153951" />
+    <state width="2498" height="236" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591476137471" />
     <state width="1858" height="128" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
     <state x="2402" y="384" width="1280" height="1056" key="SettingsEditor" timestamp="1587761997081">
       <screen x="1920" y="0" width="2560" height="1440" />
@@ -200,10 +243,14 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2020" y="127" width="2360" height="1213" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587912622218" />
-    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1587760908535">
+    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591473110929">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1587760908535" />
+    <state x="2747" y="608" width="881" height="286" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591473110929" />
+    <state x="2918" y="372" width="554" height="729" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591473113324">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2918" y="372" width="554" height="729" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591473113324" />
     <state x="2840" y="587" width="709" height="300" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1587919396409">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>

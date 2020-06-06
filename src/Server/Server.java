@@ -18,29 +18,21 @@ public class Server {
      * od serwera
      */
     private static HashMap<String, ClientHandler> clientHandlers = new HashMap<>();
-    
-    /**
-     * Rozpoczyna nasłuchiwanie poprzez zawołanie metody listen
-     * @param args argumenty metody main
-     * @throws IOException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
-     */
-    public static void main(String[] args) throws IOException {
-        listen();
-    }
-    
+
     /**
      * Nasłuchuje na porcie 6868 oczekując na zapytania od nowych klientów
      * Każdy nowy klient otrzymuje osobny wątek, który będzie obsługiwał
      * jego zapytania
      * @throws IOException wyrzuca wyjątkiem jeśli metoda socketa wyrzuci wyjątek
      */
-    public static void listen() throws IOException {
+    @SuppressWarnings("InfiniteLoopStatement")
+    public void listen() throws IOException {
         ServerSocket serverSocket = new ServerSocket(6868);
 
         while (true) {
             Socket socket = serverSocket.accept();
             
-            ClientHandler clientHandler = new ClientHandler(socket);
+            ClientHandler clientHandler = new ClientHandler(this, socket);
             new Thread(clientHandler).start();
         }
     }
@@ -49,7 +41,7 @@ public class Server {
      * Zwraca tablicę nazw wszystkich użytkowników, którzy aktualnie są online
      * @return tablica nazw użytkowników, którzy aktualnie są online
      */
-    public static String[] getUsernames() {
+    public String[] getUsernames() {
         return clientHandlers.keySet().toArray(new String[0]);
     }
     
@@ -58,7 +50,7 @@ public class Server {
      * @param username nazwa użytkownika
      * @param handler wątek obsługujący zapytania użytkownika
      */
-    public static void addClient(String username, ClientHandler handler) {
+    public void addClient(String username, ClientHandler handler) {
         clientHandlers.put(username, handler);
     }
     
@@ -67,7 +59,7 @@ public class Server {
      * akutalnie online
      * @return tablica wątków obsługujących zapytania użytkownika
      */
-    public static ClientHandler[] getClientHandlers() {
+    public ClientHandler[] getClientHandlers() {
         return clientHandlers.values().toArray(new ClientHandler[0]);
     }
 
@@ -77,7 +69,7 @@ public class Server {
      * @param username nazwa użytkownika
      * @return wątek przyporządkowany do użytkownika
      */ 
-    public static ClientHandler getClientHandler(String username) {
+    public ClientHandler getClientHandler(String username) {
         return clientHandlers.get(username);
     }
     
@@ -87,7 +79,7 @@ public class Server {
      * @param username nazwa użytkownika
      * @return wartość logiczna mówiąca czy użytkownik o podanej nazwie jest online
      */
-    public static boolean isOnline(String username) {
+    public boolean isOnline(String username) {
         return clientHandlers.containsKey(username);
     }
     
@@ -96,7 +88,7 @@ public class Server {
      * ClientHandler z HashMapy
      * @param username nazwa użytkownika
      */
-    public static void removeClient(String username) {
+    public void removeClient(String username) {
         clientHandlers.remove(username);
     }
 }

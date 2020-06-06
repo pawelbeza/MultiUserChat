@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package login_module;
+package GUI_Forms;
 
 import java.awt.*;
 import java.awt.Color;

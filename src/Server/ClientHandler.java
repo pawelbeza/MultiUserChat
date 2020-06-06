@@ -15,13 +15,15 @@ public class ClientHandler implements Runnable {
     private final DataInputStream inputStream;
     private final DataOutputStream outputStream;
     private String username;
+    private Server server;
 
     /**
      * Zainicjalizowanie socketa oraz strumieni wejściowych i wyjściowych
      * @param socket zainicjalizowanie punktu końcowego dla serwera i klienta
      * @throws IOException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
      */
-    public ClientHandler(Socket socket) throws IOException {
+    public ClientHandler(Server server, Socket socket) throws IOException {
+        this.server = server;
         this.socket = socket;
         inputStream = new DataInputStream(socket.getInputStream());
         outputStream = new DataOutputStream(socket.getOutputStream());
@@ -59,17 +61,17 @@ public class ClientHandler implements Runnable {
             socket.close();            
             inputStream.close(); 
             outputStream.close();
-        } catch(IOException e) {            
+        } catch(IOException ignored) {
         } 
     }
     
     /**
      * Wylogowanie klienta - usunięcie klienta z HashMapy klientów oraz wysłanie
      * wiadomośi do innych klinetów będących online, aby zaktualizować GUI
-     * @throws IOException 
+     * @throws IOException
      */
     private void logout() throws IOException {
-        Server.removeClient(username);
+        server.removeClient(username);
         updateUIList();
     }
     
@@ -79,7 +81,7 @@ public class ClientHandler implements Runnable {
      * @throws IOException 
      */
     private void login() throws IOException {
-        Server.addClient(username, this);
+        server.addClient(username, this);
         updateUIList();
     }
     
@@ -98,8 +100,8 @@ public class ClientHandler implements Runnable {
      * @throws IOException 
      */
     private void updateUIList() throws IOException {
-        String msg = "updateUIList#" + String.join("#", Server.getUsernames());
-        for (ClientHandler handler : Server.getClientHandlers())
+        String msg = "updateUIList#" + String.join("#", server.getUsernames());
+        for (ClientHandler handler : server.getClientHandlers())
             handler.writeOutputStream(msg);
     }
 
@@ -112,7 +114,7 @@ public class ClientHandler implements Runnable {
      */
     private void sendMsg(String[] receivers, String msg) throws IOException {
         for (String user : receivers)
-            if (Server.isOnline(user))
-                Server.getClientHandler(user).writeOutputStream(msg);
+            if (server.isOnline(user))
+                server.getClientHandler(user).writeOutputStream(msg);
     }
 }

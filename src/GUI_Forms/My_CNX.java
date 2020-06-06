@@ -1,4 +1,4 @@
-package login_module;
+package GUI_Forms;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 

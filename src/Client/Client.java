@@ -12,7 +12,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Arrays;
-import login_module.Chat_Form;
+import GUI_Forms.Chat_Form;
 
 /**
  * Client czyta oraz wysyła wiadomości do innych użytkowników
@@ -45,12 +45,12 @@ public class Client {
         outputStream = new DataOutputStream(socket.getOutputStream());        
         sendMsg("login#" + username);        
         reader();
-        
+
         // show a new form
         chat.setVisible(true);
         chat.pack();
         chat.setLocationRelativeTo(null);
-        
+
     }
     
     /**
