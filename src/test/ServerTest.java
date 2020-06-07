@@ -15,6 +15,10 @@ class ServerTest {
         server = new Server();
     }
 
+    /**
+     * Testowanie metody addClient(), która dodaje nowych klientów do serwera
+     * @throws IOException
+     */
     @Test
     void addClient() throws IOException {
         assertArrayEquals(server.getUsernames(), new String[]{});
@@ -30,6 +34,9 @@ class ServerTest {
         }
     }
 
+    /**
+     * Testowanie metody isOnline(), która sprawdza czy klient o danej nazwie jest online
+     */
     @Test
     void isOnline() {
         assertFalse(server.isOnline("Bob"));
@@ -48,6 +55,9 @@ class ServerTest {
         assertFalse(server.isOnline("Bob"));
     }
 
+    /**
+     * Testowanie metody removeClient(), która usuwa klienta o danej nazwie z serwera
+     */
     @Test
     void removeClient() {
         assertFalse(server.isOnline("Bob"));

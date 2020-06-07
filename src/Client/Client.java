@@ -27,6 +27,7 @@ public class Client {
     private final InetAddress ip;
     private final Chat_Form chat;
     private boolean isOnline = true;
+    private String receivedInput;
     
     /**
      * Inicjalizowanie socketów, strumieni I/O oraz GUI
@@ -35,24 +36,42 @@ public class Client {
      * @throws UnknownHostException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
      */
     public Client(String username) throws IOException {
+        this(username, true);
+    }
+
+    /**
+     * @return ostatnią wiadomość otrzymaną przez klienta
+     */
+    public String getLastReceivedMsg() {
+        return receivedInput;
+    }
+
+    /**
+     * Inicjalizowanie socketów oraz strumieni z opcjonalnym włączeniem GUI
+     * @param username nazwa użytkownika
+     * @throws IOException wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
+     * @throws UnknownHostException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
+     */
+    public Client(String username, boolean enableGUI) throws IOException {
         this.username = username;
         chat = new Chat_Form(this, username);
 
         ip = InetAddress.getByName("localhost");
         socket = new Socket(ip, serverPort);
-        
+
         inputStream = new DataInputStream(socket.getInputStream());
-        outputStream = new DataOutputStream(socket.getOutputStream());        
-        sendMsg("login#" + username);        
+        outputStream = new DataOutputStream(socket.getOutputStream());
+        sendMsg("login#" + username);
         reader();
 
-        // show a new form
-        chat.setVisible(true);
-        chat.pack();
-        chat.setLocationRelativeTo(null);
-
+        if (enableGUI) {
+            // show a new form
+            chat.setVisible(true);
+            chat.pack();
+            chat.setLocationRelativeTo(null);
+        }
     }
-    
+
     /**
      * Zapisuje wiadomość do strumienia wyjściowego
      * @param msg treść wiadomości
@@ -70,7 +89,7 @@ public class Client {
         new Thread(() -> {
             while (isOnline) {
                 try {
-                    String receivedInput = inputStream.readUTF();
+                    receivedInput = inputStream.readUTF();
                     String[] input = receivedInput.split("#");
                     
                     if (input.length >= 2 && input[0].equals("updateUIList")) {
