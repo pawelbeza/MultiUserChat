@@ -17,6 +17,7 @@ class ServerTest {
 
     /**
      * Testowanie metody addClient(), która dodaje nowych klientów do serwera
+     *
      * @throws IOException
      */
     @Test

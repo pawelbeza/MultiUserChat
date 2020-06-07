@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 /**
  * ClientHandler przetwarza zapytania klienta
+ *
  * @author pawel
  */
 public class ClientHandler implements Runnable {
@@ -19,6 +20,7 @@ public class ClientHandler implements Runnable {
 
     /**
      * Zainicjalizowanie socketa oraz strumieni wejściowych i wyjściowych
+     *
      * @param socket zainicjalizowanie punktu końcowego dla serwera i klienta
      * @throws IOException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
      */
@@ -38,62 +40,62 @@ public class ClientHandler implements Runnable {
             try {
                 String receivedInput = inputStream.readUTF();
                 String[] input = receivedInput.split("#");
-                                
-                if (input.length == 1 && input[0].equals("logout")) {           
+
+                if (input.length == 1 && input[0].equals("logout")) {
                     break;
-                }
-                else if (input.length == 2 && input[0].equals("login")) {
+                } else if (input.length == 2 && input[0].equals("login")) {
                     username = input[1];
                     login();
-                }
-                else if (input.length > 2 && input[0].equals("message")) {
+                } else if (input.length > 2 && input[0].equals("message")) {
                     String[] receivers = Arrays.copyOfRange(input, 2, input.length);
                     sendMsg(receivers, "message#" + username + "#" + input[1]);
                 }
-                
+
             } catch (IOException e) {
                 break;
-            }           
+            }
         }
-        try
-        {
+        try {
             logout();
-            socket.close();            
-            inputStream.close(); 
+            socket.close();
+            inputStream.close();
             outputStream.close();
-        } catch(IOException ignored) {
-        } 
+        } catch (IOException ignored) {
+        }
     }
-    
+
     /**
      * Wylogowanie klienta - usunięcie klienta z HashMapy klientów oraz wysłanie
      * wiadomośi do innych klinetów będących online, aby zaktualizować GUI
+     *
      * @throws IOException wyrzuca wyjątek jeśli metoda updateUIList wyrzuci wyjątek
      */
     private void logout() {
         server.removeClient(username);
         updateUIList();
     }
-    
+
     /**
      * Zalogowanie klienta - dodanie klienta do HashMapy klientów oraz wysłanie
      * wiadomości do innych klientów będących online, aby zaktualizować GUI
+     *
      * @throws IOException wyrzuca wyjątek jeśli metoda updateUIList wyrzuci wyjątek
      */
     private void login() {
         server.addClient(username, this);
         updateUIList();
     }
-    
+
     /**
      * Pisanie wiadomości <b>msg</b> do strumienia wyjściowego
+     *
      * @param msg wiadomość, która ma być wysłana
-     * @throws IOException  wyrzuca wyjątek jeśli metoda writeUTF wyrzuci wyjątek
+     * @throws IOException wyrzuca wyjątek jeśli metoda writeUTF wyrzuci wyjątek
      */
     private void writeOutputStream(String msg) throws IOException {
         outputStream.writeUTF(msg);
     }
-    
+
     /**
      * Wysłanie wiadomości do wszystkich klientów będących online, aby
      * zaktualizować GUI
@@ -112,10 +114,11 @@ public class ClientHandler implements Runnable {
     /**
      * Wysłanie wiadomości <b>msg></b> do wszystkich klientów z tablicy
      * <b>receivers</b>
+     *
      * @param receivers odbiorcy wiadomości
-     * @param msg wiadomość, która ma być wysłana
+     * @param msg       wiadomość, która ma być wysłana
      */
-    private void sendMsg(String[] receivers, String msg)  {
+    private void sendMsg(String[] receivers, String msg) {
         (new Thread(() -> {
             try {
                 for (String user : receivers)

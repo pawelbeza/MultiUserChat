@@ -5,6 +5,8 @@
  */
 package Client;
 
+import GUI_Forms.ChatForm;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,10 +14,10 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Arrays;
-import GUI_Forms.Chat_Form;
 
 /**
  * Client czyta oraz wysyła wiadomości do innych użytkowników
+ *
  * @author pawel
  */
 public class Client {
@@ -25,14 +27,15 @@ public class Client {
     private final DataOutputStream outputStream;
     private final Socket socket;
     private final InetAddress ip;
-    private final Chat_Form chat;
+    private final ChatForm chat;
     private boolean isOnline = true;
     private String receivedInput;
-    
+
     /**
      * Inicjalizowanie socketów, strumieni I/O oraz GUI
+     *
      * @param username nazwa użytkownika
-     * @throws IOException wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
+     * @throws IOException          wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
      * @throws UnknownHostException wyrzuca wyjątek jeśli metoda listen wyrzuci wyjątek
      */
     public Client(String username) throws IOException {
@@ -48,13 +51,14 @@ public class Client {
 
     /**
      * Inicjalizowanie socketów oraz strumieni z opcjonalnym włączeniem GUI
+     *
      * @param username nazwa użytkownika
-     * @throws IOException wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
+     * @throws IOException          wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
      * @throws UnknownHostException wyrzuca wyjątek jeśli metoda listen wyrzuci wyjątek
      */
     public Client(String username, boolean enableGUI) throws IOException {
         this.username = username;
-        chat = new Chat_Form(this, username);
+        chat = new ChatForm(this, username);
 
         ip = InetAddress.getByName("localhost");
         socket = new Socket(ip, serverPort);
@@ -74,13 +78,14 @@ public class Client {
 
     /**
      * Zapisuje wiadomość do strumienia wyjściowego
+     *
      * @param msg treść wiadomości
      * @throws IOException wyrzuca wyjątek jeśli metoda strumienia wyrzuci wyjątek
      */
     public void sendMsg(String msg) throws IOException {
-        outputStream.writeUTF(msg);    
+        outputStream.writeUTF(msg);
     }
-    
+
     /**
      * Czyta wiadomości dostarczane do użytkownika
      */
@@ -91,30 +96,30 @@ public class Client {
                 try {
                     receivedInput = inputStream.readUTF();
                     String[] input = receivedInput.split("#");
-                    
+
                     if (input.length >= 2 && input[0].equals("updateUIList")) {
                         String[] usersArr = Arrays.copyOfRange(input, 1, input.length);
                         chat.updateUserList(usersArr);
-                    }
-                    else if (input.length == 3 && input[0].equals("message")) {
+                    } else if (input.length == 3 && input[0].equals("message")) {
                         chat.receivedMsg(input[1], input[2]);
-                    }                    
+                    }
                 } catch (IOException e) {
                     break;
                 }
-            } 
+            }
         }).start();
     }
-    
+
     /**
      * Wylogowuje użytkownika tj. zamyka wszystkie strumienie i wysyła wiadomość
      * do serwera, że użytkownik jest offline
+     *
      * @throws IOException wyrzuca wyjątek jeśli metoda strumienia wyrzuci wyjątek
      */
     public void logout() throws IOException {
         isOnline = false;
         sendMsg("logout");
-        inputStream.close(); 
-        outputStream.close(); 
+        inputStream.close();
+        outputStream.close();
     }
 }

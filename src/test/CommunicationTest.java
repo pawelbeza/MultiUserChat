@@ -27,6 +27,7 @@ public class CommunicationTest {
 
     /**
      * Testowanie wysyłania wiadomości między klientami
+     *
      * @throws IOException
      * @throws InterruptedException
      */
@@ -49,6 +50,7 @@ public class CommunicationTest {
     /**
      * Testowanie wylogowywania użytkownika i testowanie czy odpowiednia informacja zostanie wysłana na pozostałych
      * klientów będących online
+     *
      * @throws IOException
      * @throws InterruptedException
      */

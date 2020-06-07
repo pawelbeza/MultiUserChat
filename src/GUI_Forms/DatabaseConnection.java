@@ -10,20 +10,20 @@ import java.util.logging.Logger;
 /**
  * <h1>My_CNX</h1>
  * Odpowiada za połączenie z bazą danych
+ *
  * @author Arkadiusz Dawid
  */
-public class My_CNX {
+public class DatabaseConnection {
 
     private static final String servername = "localhost";
     private static final String username = "pawel";
     private static final String dbname = "users_db";
     private static final Integer portnumber = 3306;
     private static final String password = "";
-    
-    public static Connection getConnection()
-    {
+
+    public static Connection getConnection() {
         Connection cnx = null;
-        
+
         MysqlDataSource datasource = new MysqlDataSource();
 
         datasource.setServerName(servername);
@@ -31,16 +31,16 @@ public class My_CNX {
         datasource.setPassword(password);
         datasource.setDatabaseName(dbname);
         datasource.setPortNumber(portnumber);
-        
+
         try {
             cnx = datasource.getConnection();
         } catch (SQLException ex) {
-            Logger.getLogger(" Get Connection -> " + My_CNX.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(" Get Connection -> " + DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return cnx;
     }
-    
+
 }
 
 

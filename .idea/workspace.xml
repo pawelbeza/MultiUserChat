@@ -4,7 +4,14 @@
     <list default="true" id="a03ca757-abd6-447b-9910-0a6e0fff474c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Forms/Chat_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Forms/Chat_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Forms/Login_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Forms/Login_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Forms/My_CNX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Forms/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Forms/Register_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Forms/Register_Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/CommunicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CommunicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ServerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,13 +71,13 @@
       <recent name="$PROJECT_DIR$/src/login_module" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Login_Form">
-    <configuration name="Login_Form" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI_Forms.Login_Form" />
+  <component name="RunManager" selected="Application.LoginForm">
+    <configuration name="LoginForm" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI_Forms.LoginForm" />
       <module name="MultiUserChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI_Forms.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,7 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Login_Form" />
+        <item itemvalue="Application.LoginForm" />
         <item itemvalue="Application.ServerController" />
         <item itemvalue="JUnit.ServerTest" />
         <item itemvalue="JUnit.CommunicationTest" />
@@ -222,29 +229,29 @@
     </state>
     <state x="2928" y="415" key="FileChooserDialogImpl/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591454402148" />
     <state x="2928" y="415" width="940" height="658" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1588511313643" />
-    <state width="2498" height="337" key="GridCell.Tab.0.bottom" timestamp="1591548148856">
+    <state width="2498" height="337" key="GridCell.Tab.0.bottom" timestamp="1591551003980">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="337" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591548148856" />
+    <state width="2498" height="337" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591551003980" />
     <state width="1858" height="128" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
-    <state width="2498" height="337" key="GridCell.Tab.0.center" timestamp="1591548148856">
+    <state width="2498" height="337" key="GridCell.Tab.0.center" timestamp="1591551003980">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.center/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="337" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591548148856" />
+    <state width="2498" height="337" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591551003980" />
     <state width="1858" height="128" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
-    <state width="2498" height="337" key="GridCell.Tab.0.left" timestamp="1591548148856">
+    <state width="2498" height="337" key="GridCell.Tab.0.left" timestamp="1591551003980">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.left/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="337" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591548148856" />
+    <state width="2498" height="337" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591551003980" />
     <state width="1858" height="128" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943003" />
-    <state width="2498" height="337" key="GridCell.Tab.0.right" timestamp="1591548148856">
+    <state width="2498" height="337" key="GridCell.Tab.0.right" timestamp="1591551003980">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2498" height="392" key="GridCell.Tab.0.right/1920.0.2560.1440/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1440" timestamp="1591458815941" />
-    <state width="2498" height="337" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591548148856" />
+    <state width="2498" height="337" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@1920.0.2560.1440" timestamp="1591551003980" />
     <state width="1858" height="128" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080/4480.360.1920.1080@4480.360.1920.1080" timestamp="1587822943004" />
     <state width="2498" height="465" key="GridCell.Tab.1.bottom" timestamp="1591545287082">
       <screen x="1920" y="0" width="2560" height="1440" />

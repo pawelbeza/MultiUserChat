@@ -5,13 +5,11 @@
  */
 package GUI_Forms;
 
+import Client.Client;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.GroupLayout;
-import javax.swing.LayoutStyle;
-import Client.Client;
-import java.awt.Color;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
@@ -20,19 +18,22 @@ import java.util.logging.Logger;
 /**
  * <h1>Chat_form</h1>
  * Tworzy główne okno programu, czyli chat.
+ *
  * @author Arkadiusz Dawid
  */
-public class Chat_Form extends javax.swing.JFrame {
+public class ChatForm extends javax.swing.JFrame {
     private final String username;
     private final Client client;
+
     /**
      * Creates new form Chat_Form
-     * @param client klient
+     *
+     * @param client   klient
      * @param username nazwa użytkownika
      */
-    public Chat_Form(Client client, String username) {
+    public ChatForm(Client client, String username) {
         initComponents();
-        
+
         this.client = client;
         this.username = username;
         nickname.setText("Your nickname: " + username);
@@ -79,12 +80,18 @@ public class Chat_Form extends javax.swing.JFrame {
         {
             jPanel1.setBackground(Color.white);
             jPanel1.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new
-            javax.swing.border.EmptyBorder(0,0,0,0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion",javax
-            .swing.border.TitledBorder.CENTER,javax.swing.border.TitledBorder.BOTTOM,new java
-            .awt.Font("Dia\u006cog",java.awt.Font.BOLD,12),java.awt
-            .Color.red),jPanel1. getBorder()));jPanel1. addPropertyChangeListener(new java.beans.
-            PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e){if("bord\u0065r".
-            equals(e.getPropertyName()))throw new RuntimeException();}});
+                    javax.swing.border.EmptyBorder(0, 0, 0, 0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax
+                    .swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BOTTOM, new java
+                    .awt.Font("Dia\u006cog", java.awt.Font.BOLD, 12), java.awt
+                    .Color.red), jPanel1.getBorder()));
+            jPanel1.addPropertyChangeListener(new java.beans.
+                    PropertyChangeListener() {
+                @Override
+                public void propertyChange(java.beans.PropertyChangeEvent e) {
+                    if ("bord\u0065r".
+                            equals(e.getPropertyName())) throw new RuntimeException();
+                }
+            });
 
             //======== jPanel2 ========
             {
@@ -111,15 +118,15 @@ public class Chat_Form extends javax.swing.JFrame {
                         GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
                         jPanel4.setLayout(jPanel4Layout);
                         jPanel4Layout.setHorizontalGroup(
-                            jPanel4Layout.createParallelGroup()
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(yourConvLabel, GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
-                                    .addContainerGap())
+                                jPanel4Layout.createParallelGroup()
+                                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(yourConvLabel, GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
+                                                .addContainerGap())
                         );
                         jPanel4Layout.setVerticalGroup(
-                            jPanel4Layout.createParallelGroup()
-                                .addComponent(yourConvLabel, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                                jPanel4Layout.createParallelGroup()
+                                        .addComponent(yourConvLabel, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                         );
                     }
 
@@ -137,15 +144,15 @@ public class Chat_Form extends javax.swing.JFrame {
                         GroupLayout jPanel5Layout = new GroupLayout(jPanel5);
                         jPanel5.setLayout(jPanel5Layout);
                         jPanel5Layout.setHorizontalGroup(
-                            jPanel5Layout.createParallelGroup()
-                                .addGroup(GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(onlineUsersText, GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                                    .addContainerGap())
+                                jPanel5Layout.createParallelGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(onlineUsersText, GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                                                .addContainerGap())
                         );
                         jPanel5Layout.setVerticalGroup(
-                            jPanel5Layout.createParallelGroup()
-                                .addComponent(onlineUsersText, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                                jPanel5Layout.createParallelGroup()
+                                        .addComponent(onlineUsersText, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                         );
                     }
 
@@ -167,18 +174,18 @@ public class Chat_Form extends javax.swing.JFrame {
                         GroupLayout jPanel7Layout = new GroupLayout(jPanel7);
                         jPanel7.setLayout(jPanel7Layout);
                         jPanel7Layout.setHorizontalGroup(
-                            jPanel7Layout.createParallelGroup()
-                                .addGroup(GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jScrollPane2)
-                                    .addContainerGap())
+                                jPanel7Layout.createParallelGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollPane2)
+                                                .addContainerGap())
                         );
                         jPanel7Layout.setVerticalGroup(
-                            jPanel7Layout.createParallelGroup()
-                                .addGroup(jPanel7Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jScrollPane2)
-                                    .addContainerGap())
+                                jPanel7Layout.createParallelGroup()
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollPane2)
+                                                .addContainerGap())
                         );
                     }
 
@@ -193,16 +200,22 @@ public class Chat_Form extends javax.swing.JFrame {
                             onlineUsersList.setFont(new Font("Tahoma", Font.PLAIN, 14));
                             onlineUsersList.setModel(new AbstractListModel<String>() {
                                 String[] values = {
-                                    "Item 1",
-                                    "Item 2",
-                                    "Item 3",
-                                    "Item 4",
-                                    "Item 5"
+                                        "Item 1",
+                                        "Item 2",
+                                        "Item 3",
+                                        "Item 4",
+                                        "Item 5"
                                 };
+
                                 @Override
-                                public int getSize() { return values.length; }
+                                public int getSize() {
+                                    return values.length;
+                                }
+
                                 @Override
-                                public String getElementAt(int i) { return values[i]; }
+                                public String getElementAt(int i) {
+                                    return values[i];
+                                }
                             });
                             jScrollPane1.setViewportView(onlineUsersList);
                         }
@@ -210,18 +223,18 @@ public class Chat_Form extends javax.swing.JFrame {
                         GroupLayout jPanel8Layout = new GroupLayout(jPanel8);
                         jPanel8.setLayout(jPanel8Layout);
                         jPanel8Layout.setHorizontalGroup(
-                            jPanel8Layout.createParallelGroup()
-                                .addGroup(jPanel8Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jScrollPane1)
-                                    .addContainerGap())
+                                jPanel8Layout.createParallelGroup()
+                                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollPane1)
+                                                .addContainerGap())
                         );
                         jPanel8Layout.setVerticalGroup(
-                            jPanel8Layout.createParallelGroup()
-                                .addGroup(jPanel8Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
-                                    .addContainerGap())
+                                jPanel8Layout.createParallelGroup()
+                                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                                                .addContainerGap())
                         );
                     }
 
@@ -235,6 +248,7 @@ public class Chat_Form extends javax.swing.JFrame {
                         public void mouseEntered(MouseEvent e) {
                             jButton1MouseEntered(e);
                         }
+
                         @Override
                         public void mouseExited(MouseEvent e) {
                             jButton1MouseExited(e);
@@ -254,6 +268,7 @@ public class Chat_Form extends javax.swing.JFrame {
                             public void focusGained(FocusEvent e) {
                                 messageBoxFocusGained(e);
                             }
+
                             @Override
                             public void focusLost(FocusEvent e) {
                                 messageBoxFocusLost(e);
@@ -264,54 +279,54 @@ public class Chat_Form extends javax.swing.JFrame {
                         GroupLayout jPanel9Layout = new GroupLayout(jPanel9);
                         jPanel9.setLayout(jPanel9Layout);
                         jPanel9Layout.setHorizontalGroup(
-                            jPanel9Layout.createParallelGroup()
-                                .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(messageBox)
-                                    .addContainerGap())
+                                jPanel9Layout.createParallelGroup()
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(messageBox)
+                                                .addContainerGap())
                         );
                         jPanel9Layout.setVerticalGroup(
-                            jPanel9Layout.createParallelGroup()
-                                .addGroup(GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(messageBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addContainerGap())
+                                jPanel9Layout.createParallelGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(messageBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap())
                         );
                     }
 
                     GroupLayout jPanel3Layout = new GroupLayout(jPanel3);
                     jPanel3.setLayout(jPanel3Layout);
                     jPanel3Layout.setHorizontalGroup(
-                        jPanel3Layout.createParallelGroup()
-                            .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanel7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel4, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel9, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())
+                            jPanel3Layout.createParallelGroup()
+                                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                            .addContainerGap()
+                                            .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jPanel7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jPanel4, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jPanel9, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jPanel5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jPanel8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addContainerGap())
                     );
                     jPanel3Layout.setVerticalGroup(
-                        jPanel3Layout.createParallelGroup()
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel3Layout.createParallelGroup()
-                                    .addComponent(jPanel5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(19, 19, 19)
-                                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            jPanel3Layout.createParallelGroup()
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addContainerGap()
+                                            .addGroup(jPanel3Layout.createParallelGroup()
+                                                    .addComponent(jPanel5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jPanel7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jPanel8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(19, 19, 19)
+                                            .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jPanel9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     );
                 }
 
@@ -327,63 +342,63 @@ public class Chat_Form extends javax.swing.JFrame {
                     GroupLayout jPanel6Layout = new GroupLayout(jPanel6);
                     jPanel6.setLayout(jPanel6Layout);
                     jPanel6Layout.setHorizontalGroup(
-                        jPanel6Layout.createParallelGroup()
-                            .addComponent(nickname, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            jPanel6Layout.createParallelGroup()
+                                    .addComponent(nickname, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     );
                     jPanel6Layout.setVerticalGroup(
-                        jPanel6Layout.createParallelGroup()
-                            .addComponent(nickname, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                            jPanel6Layout.createParallelGroup()
+                                    .addComponent(nickname, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                     );
                 }
 
                 GroupLayout jPanel2Layout = new GroupLayout(jPanel2);
                 jPanel2.setLayout(jPanel2Layout);
                 jPanel2Layout.setHorizontalGroup(
-                    jPanel2Layout.createParallelGroup()
-                        .addComponent(jLabel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel2Layout.createParallelGroup()
-                                .addComponent(jPanel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel6, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addContainerGap())
+                        jPanel2Layout.createParallelGroup()
+                                .addComponent(jLabel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addGroup(jPanel2Layout.createParallelGroup()
+                                                .addComponent(jPanel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jPanel6, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addContainerGap())
                 );
                 jPanel2Layout.setVerticalGroup(
-                    jPanel2Layout.createParallelGroup()
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jPanel6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        jPanel2Layout.createParallelGroup()
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
             }
 
             GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
             jPanel1.setLayout(jPanel1Layout);
             jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup()
-                    .addComponent(jPanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    jPanel1Layout.createParallelGroup()
+                            .addComponent(jPanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             );
             jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup()
-                    .addComponent(jPanel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    jPanel1Layout.createParallelGroup()
+                            .addComponent(jPanel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
             );
         }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                contentPaneLayout.createParallelGroup()
+                        .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         contentPaneLayout.setVerticalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap())
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -391,69 +406,75 @@ public class Chat_Form extends javax.swing.JFrame {
 
     /**
      * Aktualizacja listy użytkowników
+     *
      * @param users tablica użytkowników
      */
     public void updateUserList(String[] users) {
         onlineUsersList.setListData(users);
     }
-            
+
     private void messageBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_messageBoxActionPerformed
-    
+
     /**
      * Po kliknięciu w przycisk <b>SEND</b> rozsyłana jest wiadomość
+     *
      * @param evt zdarzenie kliknięcia w przycisk
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String msgText = messageBox.getText();
         messageBox.setText("");
-        
-        List<String> selectedReceivers = onlineUsersList.getSelectedValuesList(); 
+
+        List<String> selectedReceivers = onlineUsersList.getSelectedValuesList();
         String receivers = String.join("#", selectedReceivers);
         String msg = "message#" + msgText + "#" + receivers;
         try {
             client.sendMsg(msg);
         } catch (IOException ex) {
-            Logger.getLogger(Chat_Form.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ChatForm.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * Zamyka okno chatu, wylogowuje użytkownika
+     *
      * @param evt zdarzenie zamknięcia okna chatu
      */
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         try {
             client.logout();
         } catch (IOException ex) {
-            Logger.getLogger(Chat_Form.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ChatForm.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_formWindowClosing
 
-    /** 
+    /**
      * Zmienia kolor przycisku <b>SEND</b> po najechaniu myszką
+     *
      * @param evt zdarzenie najechania myszką na przycisk
      */
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setBackground(new Color(31,31,255));
+        jButton1.setBackground(new Color(31, 31, 255));
     }//GEN-LAST:event_jButton1MouseEntered
 
     /**
      * Przywraca kolor przycisku <b>SEND</b> po odsunięciu myszki
+     *
      * @param evt zdarzenie odsunięcia myszki od przycisku
      */
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(new Color(61,61,255));
+        jButton1.setBackground(new Color(61, 61, 255));
     }//GEN-LAST:event_jButton1MouseExited
 
     /**
      * Usuwa placeholder "write here" i zmienia kolor czcionki z szarego na czarny
+     *
      * @param evt zdarzenie uzyskania "focusu" przez pole do wpisywania nowej wiadomości
      */
     private void messageBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_messageBoxFocusGained
-        if(messageBox.getText().trim().toLowerCase().equals("write here")){
+        if (messageBox.getText().trim().toLowerCase().equals("write here")) {
             messageBox.setText("");
             messageBox.setForeground(Color.BLACK);
         }
@@ -461,12 +482,13 @@ public class Chat_Form extends javax.swing.JFrame {
 
     /**
      * Przywraca placeholder "write here" i kolor czcionki na szary, jeśli użytkownik nic nie wpisał
-     * @param evt zdarzenie utracenia "focusu" przez pole do wpisywania nowej wiadomości 
+     *
+     * @param evt zdarzenie utracenia "focusu" przez pole do wpisywania nowej wiadomości
      */
     private void messageBoxFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_messageBoxFocusLost
-        if(messageBox.getText().trim().equals("")){
+        if (messageBox.getText().trim().equals("")) {
             messageBox.setText("Write here");
-            messageBox.setForeground(new Color(153,153,153));
+            messageBox.setForeground(new Color(153, 153, 153));
         }
     }//GEN-LAST:event_messageBoxFocusLost
 
@@ -496,8 +518,9 @@ public class Chat_Form extends javax.swing.JFrame {
 
     /**
      * Uaktualnia okienko chatu o nową wiadomość
+     *
      * @param author nick nadawcy wiadomości
-     * @param msg treść wiadomości
+     * @param msg    treść wiadomości
      */
     public void receivedMsg(String author, String msg) {
         conversationBox.append("New message from: " + author + "\n" + msg + "\n");
