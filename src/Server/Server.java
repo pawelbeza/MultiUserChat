@@ -17,7 +17,7 @@ public class Server {
      * stałym do dowolnego z wątków, którym będziemy przekazywali wiadomości 
      * od serwera
      */
-    private static HashMap<String, ClientHandler> clientHandlers = new HashMap<>();
+    private HashMap<String, ClientHandler> clientHandlers = new HashMap<>();
 
     /**
      * Nasłuchuje na porcie 6868 oczekując na zapytania od nowych klientów
