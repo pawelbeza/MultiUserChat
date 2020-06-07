@@ -15,7 +15,7 @@ public class ClientHandler implements Runnable {
     private final DataInputStream inputStream;
     private final DataOutputStream outputStream;
     private String username;
-    private Server server;
+    private final Server server;
 
     /**
      * Zainicjalizowanie socketa oraz strumieni wejściowych i wyjściowych
@@ -68,9 +68,9 @@ public class ClientHandler implements Runnable {
     /**
      * Wylogowanie klienta - usunięcie klienta z HashMapy klientów oraz wysłanie
      * wiadomośi do innych klinetów będących online, aby zaktualizować GUI
-     * @throws IOException
+     * @throws IOException wyrzuca wyjątek jeśli metoda updateUIList wyrzuci wyjątek
      */
-    private void logout() throws IOException {
+    private void logout() {
         server.removeClient(username);
         updateUIList();
     }
@@ -78,17 +78,17 @@ public class ClientHandler implements Runnable {
     /**
      * Zalogowanie klienta - dodanie klienta do HashMapy klientów oraz wysłanie
      * wiadomości do innych klientów będących online, aby zaktualizować GUI
-     * @throws IOException 
+     * @throws IOException wyrzuca wyjątek jeśli metoda updateUIList wyrzuci wyjątek
      */
-    private void login() throws IOException {
+    private void login() {
         server.addClient(username, this);
         updateUIList();
     }
     
     /**
      * Pisanie wiadomości <b>msg</b> do strumienia wyjściowego
-     * @param msg
-     * @throws IOException 
+     * @param msg wiadomość, która ma być wysłana
+     * @throws IOException  wyrzuca wyjątek jeśli metoda writeUTF wyrzuci wyjątek
      */
     private void writeOutputStream(String msg) throws IOException {
         outputStream.writeUTF(msg);
@@ -97,24 +97,32 @@ public class ClientHandler implements Runnable {
     /**
      * Wysłanie wiadomości do wszystkich klientów będących online, aby
      * zaktualizować GUI
-     * @throws IOException 
      */
-    private void updateUIList() throws IOException {
-        String msg = "updateUIList#" + String.join("#", server.getUsernames());
-        for (ClientHandler handler : server.getClientHandlers())
-            handler.writeOutputStream(msg);
+    private void updateUIList() {
+        (new Thread(() -> {
+            try {
+                String msg = "updateUIList#" + String.join("#", server.getUsernames());
+                for (ClientHandler handler : server.getClientHandlers())
+                    handler.writeOutputStream(msg);
+            } catch (IOException ignored) {
+            }
+        })).start();
     }
 
     /**
      * Wysłanie wiadomości <b>msg></b> do wszystkich klientów z tablicy
      * <b>receivers</b>
-     * @param receivers
-     * @param msg
-     * @throws IOException 
+     * @param receivers odbiorcy wiadomości
+     * @param msg wiadomość, która ma być wysłana
      */
-    private void sendMsg(String[] receivers, String msg) throws IOException {
-        for (String user : receivers)
-            if (server.isOnline(user))
-                server.getClientHandler(user).writeOutputStream(msg);
+    private void sendMsg(String[] receivers, String msg)  {
+        (new Thread(() -> {
+            try {
+                for (String user : receivers)
+                    if (server.isOnline(user))
+                        server.getClientHandler(user).writeOutputStream(msg);
+            } catch (IOException ignored) {
+            }
+        })).start();
     }
 }

@@ -33,7 +33,7 @@ public class Client {
      * Inicjalizowanie socketów, strumieni I/O oraz GUI
      * @param username nazwa użytkownika
      * @throws IOException wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
-     * @throws UnknownHostException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
+     * @throws UnknownHostException wyrzuca wyjątek jeśli metoda listen wyrzuci wyjątek
      */
     public Client(String username) throws IOException {
         this(username, true);
@@ -50,7 +50,7 @@ public class Client {
      * Inicjalizowanie socketów oraz strumieni z opcjonalnym włączeniem GUI
      * @param username nazwa użytkownika
      * @throws IOException wyrzuca wyjątek jeśli metoda socketa wyrzuci wyjątek
-     * @throws UnknownHostException wyrzuca wyjątkiem jeśli metoda listen wyrzuci wyjątek
+     * @throws UnknownHostException wyrzuca wyjątek jeśli metoda listen wyrzuci wyjątek
      */
     public Client(String username, boolean enableGUI) throws IOException {
         this.username = username;
